@@ -97,6 +97,9 @@ galleryList.addEventListener('click', event => {
     if (event.target.tagName === 'IMG') { 
         const imgSrc = event.target.dataset.original; 
 
+        const link = event.target.closest('a');
+        console.log(link.href);
+        
         const instance = basicLightbox.create(
             `<img src='${imgSrc}' alt="${event.target.alt}">`
         );
